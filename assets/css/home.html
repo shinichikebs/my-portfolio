@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to cart</title>
+    <style>
+        body {
+            background: hsl(291, 53%, 35%);
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        #cart-btn {
+            border: none;
+            padding: 15px;
+            font-size: 22px;
+            background: #03A9F4;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 2px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        #cart-btn:active {
+            background-color: #6cff71;
+            box-shadow: none;
+            transform: translateY(4px);
+        }
+
+        #cart-wrap {
+            position: relative;
+        }
+
+        #cart {
+            position: absolute;
+            background: #ff0;
+            color: #000;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add to cart</h1>
+    <div id="cart-wrap">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart3" fill="white"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+        </svg>
+        <span id="cart">0</span>
+    </div>
+    <button id="cart-btn">Add to cart</button>
+    <script>
+        const button = document.getElementById("cart-btn");
+        const cart = document.getElementById('cart')
+        let i = 1;
+        button.addEventListener("click", () => {
+            cart.innerText = i++;
+        })
+    </script>
+</body>
+
+</html>
