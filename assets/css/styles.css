@@ -402,6 +402,52 @@ li.active a{
   border-radius: .5rem 0 .5rem 0;
 }
 
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered image container */
+.lightbox-content {
+  position: relative;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Image inside the modal */
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Close button (X) */
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
 /*========== APP ==========*/
 .app__data{
   text-align: center;

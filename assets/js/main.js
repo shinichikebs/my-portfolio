@@ -23,6 +23,45 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+//image modal certifaticate
+
+const zoomableImages = document.querySelectorAll('.menu__img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Show modal on image click
+zoomableImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+// Close function
+function closeLightbox() {
+  lightbox.style.display = 'none';
+  lightboxImg.src = '';
+}
+
+// for event
+const zoomableImages2 = document.querySelectorAll('.app__img');
+const lightbox2 = document.getElementById('lightbox');
+const lightboxImg2 = document.getElementById('lightbox-img');
+
+// Show modal on image click
+zoomableImages2.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg2.src = img.src;
+    lightbox2.style.display = 'flex';
+  });
+});
+
+// Close function
+function closeLightbox() {
+  lightbox2.style.display = 'none';
+  lightboxImg2.src = '';
+}
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
